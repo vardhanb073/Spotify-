@@ -1,0 +1,20 @@
+{
+	"name": "ds_file_array",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureDatalakeconnection",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Json",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": "file_array.json",
+				"fileSystem": "ubercontainer"
+			}
+		},
+		"schema": {}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

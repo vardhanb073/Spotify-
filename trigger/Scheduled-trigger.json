@@ -1,0 +1,25 @@
+{
+	"name": "Scheduled-trigger",
+	"properties": {
+		"annotations": [],
+		"runtimeState": "Started",
+		"pipelines": [
+			{
+				"pipelineReference": {
+					"referenceName": "uberIngestion",
+					"type": "PipelineReference"
+				}
+			}
+		],
+		"type": "ScheduleTrigger",
+		"typeProperties": {
+			"recurrence": {
+				"frequency": "Minute",
+				"interval": 5,
+				"startTime": "2026-03-04T11:15:00",
+				"endTime": "2026-03-04T11:20:00",
+				"timeZone": "India Standard Time"
+			}
+		}
+	}
+}

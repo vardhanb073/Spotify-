@@ -1,0 +1,29 @@
+{
+	"name": "ds_ingest",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureDatalakeconnection",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"p_file": {
+				"type": "string"
+			}
+		},
+		"annotations": [],
+		"type": "Json",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": {
+					"value": "@{dataset().p_file}.json",
+					"type": "Expression"
+				},
+				"folderPath": "ingestion",
+				"fileSystem": "ubercontainer"
+			}
+		},
+		"schema": {}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}
